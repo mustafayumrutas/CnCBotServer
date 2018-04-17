@@ -1,11 +1,50 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/1.14.0/css/jquery.terminal.min.css" rel="stylesheet"/>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>Hello, world!</title>
+</head>
+<body>
+<div class="container">
+
+  <h1>OVERVIEW</h1>
+  <form action="/logout" method="post" class="pull-right">
+    <input type="submit" value="LOGOUT" class="btn btn-danger"/>
+  </form>
+  <h2>CONTROL</h2>
+  <div id="terminal"></div>
+  <h2>Current connections (<span id="number_of_connections"></span>)</h2>
+  <table class="table table-striped table-hover table-condensed" id="connections">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>IP</th>
+      <th>PORT</th>
+      <th>ACTION</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/dist/bootstrap.min.js"></script>
+</body>
+</html>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/1.14.0/js/jquery.terminal.min.js"></script>
+<script src="/javascripts/indexscript.js" ></script>
+</body>
 </html>
