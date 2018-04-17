@@ -13,6 +13,6 @@ var dataload = mongoose.Schema({
 
 });
 
-var chat = mongoose.model('connection',connection);
+var dataload = mongoose.model('dataload',dataload);
 
-module.exports = connection;
+module.exports = dataload;
