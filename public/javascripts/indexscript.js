@@ -20,7 +20,7 @@ $(document).ready(function () {
     socket.on('data', function (data) {
        console.log(JSON.stringify(data));
     });
-    socket.on('add-new-socket', function (data) {
+    socket.on('add-new-connection', function (data) {
         console.log(JSON.stringify(data));
     });
     socket.on('update-connection', function (data) {
@@ -29,7 +29,7 @@ $(document).ready(function () {
     socket.on('info', function (data) {
         termMain.echo(JSON.parse(data));
     });
-    socket.on('data', function (data) {
+    socket.on('delete-conn', function (data) {
 
     });
 

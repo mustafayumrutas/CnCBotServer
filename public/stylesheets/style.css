@@ -1,13 +1,4 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color:#ffffff;
-  background-color:#37342F;
-}
 
-a {
-  color: #00B7FF;
-}
 #terminal {
   border-radius: 4px;
   border: 1px solid #ffffff;
