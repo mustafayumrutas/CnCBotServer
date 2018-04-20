@@ -5,11 +5,11 @@ var mongoose = require('mongoose');
 var dataload = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
 
-    Sender: {type:String,required:true, lowercase: true}, //index:true
+    sender_id: mongoose.Schema.Types.ObjectId, //index:true
 
-    Receiver: {type:String,required:true},
+    receiver_id: mongoose.Schema.Types.ObjectId,
 
-    Data: {type: Date, default: Date.now() },
+    data: {type:Object},
 
 });
 

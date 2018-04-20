@@ -30,34 +30,39 @@ app.use(express.static(__dirname + '/node_modules'));
     /**
      * Listen on provided port, on all network interfaces.
      */
-    server.listen(port,'25.17.19.10');
+    server.listen(port);
     server.on('error', onError);
     server.on('listening', onListening);
     var Websocketserver=require('./Websocketserver')(server);
     var BotSocketServer=require('./BotSocketServer')(Websocketserver);
 
 app.get('/', function(req, res, next) {
-    BotSocketServer.deneme();
     res.render('login');
 });
 app.get('/index',function (req,res,next) {
-    BotSocketServer.deneme();
     res.render('index1');
 });
+app.post('/index-cmd',function (req,res) {
+    console.log(req.body);
+    let cmd = req.body.cmd;
+    BotSocketServer.broadcastCmd(cmd);
+});
 app.get('/logout',function (req,res,next) {
-    BotSocketServer.deneme();
     res.render('login');
 });
 app.get('/charts',function (req,res,next) {
     res.render('charts');
 });
 app.get('/tables',function (req,res,next) {
-    console.log('i am gheree');
-    res.render('tables');
+    BotSocketServer.getAllConnections(function (callback) {
+        res.render('tables',{
+            connections: callback
+        });
+        console.log(JSON.stringify(callback));
+    });
+
 });
-app.post('/index-cmd',function (req,res) {
-    BotSocketServer.deneme();
-});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

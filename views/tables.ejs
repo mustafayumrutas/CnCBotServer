@@ -194,8 +194,15 @@
                 </tr>
               </tfoot>
               <tbody>
-
-
+              <% for(var connection of connections){ %>
+              <tr data-connection-id="<%= connection._id %>">
+                <td><%= connection._id %></td>
+                <td><%= connection.name %></td>
+                <td><%= connection.ip %></td>
+                <td><%= connection.port %></td>
+                <td><a href="/control/<%= connection._id %>" class="btn btn-success btn-xs">CONTROL</a></td>
+              </tr>
+              <%}%>
               </tbody>
             </table>
           </div>
@@ -246,6 +253,7 @@
     <script src="../js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
     <script src="../js/sb-admin-datatables.min.js"></script>
+    <script src="/javascripts/tablescripts"></script>
   </div>
 </body>
 
