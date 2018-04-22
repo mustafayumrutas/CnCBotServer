@@ -5,13 +5,17 @@ var mongoose = require('mongoose');
 var connections = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
 
+    id:{type:String},
+
     socket: {type:String,required:true}, //index:true
 
     ip:{type:String,required:true},
 
     port: {type:String,required:true},
 
-    name: {type:String}
+    name: {type:String},
+
+    online:{type:Boolean}
 
 });
 

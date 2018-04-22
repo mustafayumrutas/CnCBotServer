@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    let socket = io('http://127.0.0.1:4000');
-
+    var socket = io('http://127.0.0.1:3000');
+    console.log('selam');
     socket.on('new-connection', function (data) {
         addConnection(JSON.parse(data));
     });
@@ -12,23 +12,21 @@ $(document).ready(function () {
     });
     let addConnection = function (data) {
         $('#connections tr:last').after(getConnectionHtml(data));
-        changeNumberOfConnections(1);
     };
     let deleteConnection = function (data) {
-        $('tr[data-connection-id=' + data._id + ']').empty();
-        changeNumberOfConnections(-1);
+        $('tr[data-connection-id=' + data.id + ']').empty();
     };
     let updateConnection = function (data) {
-        let element = $('tr[data-connection-id=' + data._id + ']').replaceWith(getConnectionHtml(data));
+        let element = $('tr[data-connection-id=' + data.id + ']').replaceWith(getConnectionHtml(data));
     };
     let getConnectionHtml = function (data) {
         return `
-             <tr data-connection-id="${data._id}">
-                <td>${data._id}</td>
+             <tr data-connection-id="${data.id}">
+                <td>${data.id}</td>
                 <td>${data.name}</td>
                 <td>${data.ip}</td>
                 <td>${data.port}</td>
-                <td><a href="/control/${data._id}" class="btn btn-success btn-xs">CONTROL</a></td>
+                <td><a href="/control/${data.id}" class="btn btn-success btn-xs">CONTROL</a></td>
             </tr>`
     };
 

@@ -11,7 +11,7 @@ $(document).ready(function () {
                 method: 'post'
             })
     },{
-        greetings: 'bu bizim botumuz',
+        greetings: 'MHBOT',
         name: 'raspbot',
         height: 400,
         prompt: '--> '
@@ -22,6 +22,7 @@ $(document).ready(function () {
     socket.on('data', function (data) {
         let packet =JSON.parse(data);
         let output = `-> ${packet.receiver_id} : ${packet.data.name}  \n ${atob(packet.data.output)}`
+        console.log(packet.data.output);
         terminal.echo(output);
     });
 

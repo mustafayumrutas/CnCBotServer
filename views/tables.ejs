@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>SB Admin - Start Bootstrap Template</title>
+  <title>BoTAdminPanel</title>
   <!-- Bootstrap core CSS-->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -16,19 +16,20 @@
   <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
+  <script src="/socket.io-client/dist/socket.io.js" ></script>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="/index">Start Bootstrap</a>
+    <a class="navbar-brand" href="/index">BoTAdminPanel</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="BoTAdminPanel">
             <a class="nav-link" href="/index">
               <i class="fa fa-fw fa-dashboard"></i>
               <span class="nav-link-text">Index</span>
@@ -47,9 +48,9 @@
             </a>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-            <a class="nav-link" href="#">
-              <i class="fa fa-fw fa-link"></i>
-              <span class="nav-link-text">Link</span>
+            <a class="nav-link" href="/logs">
+              <i class="fa fa-fw fa-table"></i>
+              <span class="nav-link-text">Logs</span>
             </a>
           </li>
         </ul>
@@ -162,17 +163,17 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="/index">BoTAdminPanel</a>
         </li>
         <li class="breadcrumb-item active">Tables</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
+          <i class="fa fa-table"></i>  Bagli (<span id="number_of_connections"><%= connections.length%> Bot</span>)</div>
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table id="connections" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>ID</th>
@@ -180,27 +181,25 @@
                   <th>IP</th>
                   <th>PORT</th>
                   <th>ACTION</th>
-                  <th>Salary</th>
                 </tr>
               </thead>
               <tfoot>
                 <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>IP</th>
+                  <th>PORT</th>
+                  <th>ACTION</th>
                 </tr>
               </tfoot>
               <tbody>
               <% for(var connection of connections){ %>
-              <tr data-connection-id="<%= connection._id %>">
-                <td><%= connection._id %></td>
+              <tr data-connection-id="<%= connection.id %>">
+                <td><%= connection.id %></td>
                 <td><%= connection.name %></td>
                 <td><%= connection.ip %></td>
                 <td><%= connection.port %></td>
-                <td><a href="/control/<%= connection._id %>" class="btn btn-success btn-xs">CONTROL</a></td>
+                <td><a href="/control/<%= connection.id %>" class="btn btn-success btn-xs">CONTROL</a></td>
               </tr>
               <%}%>
               </tbody>
@@ -215,7 +214,7 @@
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright © Your Website 2018</small>
+          <small>MHBOT Admin Panel</small>
         </div>
       </div>
     </footer>
@@ -236,7 +235,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.ejs">Logout</a>
+            <a class="btn btn-primary" href="/logout">Logout</a>
           </div>
         </div>
       </div>
@@ -253,7 +252,7 @@
     <script src="../js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
     <script src="../js/sb-admin-datatables.min.js"></script>
-    <script src="/javascripts/tablescripts"></script>
+    <script src="../javascripts/tablescript.js"></script>
   </div>
 </body>
 
