@@ -18,6 +18,7 @@ module.exports=  function(websocket){
     var dataload=require('./models/dataload');
     const SERVER_ID = uuid();
     console.log(SERVER_ID);
+    var querys=[];
     var io = require('socket.io')(4000);
     io.on('connection', function(socket){
         var ip=socket.request.connection.remoteAddress;
@@ -170,13 +171,29 @@ module.exports=  function(websocket){
             callback(result);
         });
     };
+    let GetUserLogs=function (name,callback) {
+        Getconnectionsbyname(name,function (connection) {
+            dataload.find({$or:[{sender_id:connection},{receiver_id:connection}]},function (err,result) {
+                if (err) throw result;
+                callback(result);
+            });
+        });
+    };
+    let Getconnectionsbyname=function (name,callback) {
+        connections.find({name:name},function (err,connection) {
+           if(err) throw err;
+           var results=[];
+
+        });
+    };
 
     return {
         getConnectionById: getConnectionById,
         getAllConnections: getAllConnections,
         sendCmd: sendCmd,
         broadcastCmd: broadcastCmd,
-        GetAllLogs:GetAllLogs
+        GetAllLogs:GetAllLogs,
+        GetUserLogs:GetUserLogs
     }
 };
 

@@ -12,7 +12,7 @@ $(document).ready(function () {
             })
     },{
         greetings: 'MHBOT',
-        name: 'raspbot',
+        name: 'MHBOT',
         height: 400,
         prompt: '--> '
     });

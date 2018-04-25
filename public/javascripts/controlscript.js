@@ -1,10 +1,7 @@
 $(document).ready(() => {
     let socket = io('http://127.0.0.1:3000');
-    let $numberOfConnections = $('');
-    let senderId = $('#terminal-control').data('connection-id');
-
-
-    let termMain = $('#terminal-control').terminal(function (cmd, term) {
+    let senderId = $('#terminal').data('connection-id');
+    let terminal = $('#terminal').terminal(function (cmd, term) {
         $.ajax({
             url: '/control/'+senderId+'/cmd/',
             data: {
@@ -13,8 +10,8 @@ $(document).ready(() => {
             method: 'post'
         })
     }, {
-        greetings: 'RASPBOT COMMAND AND CONQUER!',
-        name: 'raspbot',
+        greetings: 'MHBOT',
+        name: 'MHBOT',
         height: 600,
         prompt: '> '
     });
@@ -22,19 +19,14 @@ $(document).ready(() => {
     socket.on('data', function (data) {
         let packet =JSON.parse(data);
         if(packet.sender_id === senderId){
-            termMain.echo(atob(packet.data.output));
+            terminal.echo(atob(packet.data.output));
         }
     });
     socket.on('delete-connection', function(data){
         let packet =JSON.parse(data);
         if(packet.id === senderId){
-            termMain.echo('CONNECTION (' +senderId +') has abonded ship! \nLet him drown...');
-            termMain.pause();
+            terminal.echo('Baglanti Koptu (' +senderId +')');
+            terminal.pause();
         }
-    });
-
-    $('#mass-command').on('submit', function (e) {
-        e.preventDefault();
-        let formdata = $(this).serialize();
     });
 });

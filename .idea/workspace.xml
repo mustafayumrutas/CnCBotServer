@@ -5,16 +5,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/BotSocketServer.js" afterPath="$PROJECT_DIR$/BotSocketServer.js" />
       <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change beforePath="$PROJECT_DIR$/crypto.js" afterPath="$PROJECT_DIR$/crypto.js" />
-      <change beforePath="$PROJECT_DIR$/models/connection.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/models/connections.js" afterPath="$PROJECT_DIR$/models/connections.js" />
       <change beforePath="$PROJECT_DIR$/models/dataload.js" afterPath="$PROJECT_DIR$/models/dataload.js" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/controlscript.js" afterPath="$PROJECT_DIR$/public/javascripts/controlscript.js" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/indexscript.js" afterPath="$PROJECT_DIR$/public/javascripts/indexscript.js" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/tablescripts.js" afterPath="$PROJECT_DIR$/public/javascripts/tablescript.js" />
-      <change beforePath="$PROJECT_DIR$/views/charts.ejs" afterPath="$PROJECT_DIR$/views/charts.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/Command.ejs" afterPath="$PROJECT_DIR$/views/Command.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/charts.ejs" afterPath="" />
       <change beforePath="$PROJECT_DIR$/views/index1.ejs" afterPath="$PROJECT_DIR$/views/index1.ejs" />
-      <change beforePath="$PROJECT_DIR$/views/login.ejs" afterPath="$PROJECT_DIR$/views/login.ejs" />
+      <change beforePath="$PROJECT_DIR$/views/log.ejs" afterPath="$PROJECT_DIR$/views/log.ejs" />
       <change beforePath="$PROJECT_DIR$/views/tables.ejs" afterPath="$PROJECT_DIR$/views/tables.ejs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,28 +27,18 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="66" column="3" lean-forward="false" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
+            <state relative-caret-position="268">
+              <caret line="97" column="26" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index1.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index1.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="208" column="52" lean-forward="false" selection-start-line="208" selection-start-column="52" selection-end-line="208" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BotSocketServer.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BotSocketServer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BotSocketServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="176" column="25" lean-forward="false" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
+            <state relative-caret-position="47">
+              <caret line="165" column="20" lean-forward="true" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="20" />
               <folding>
                 <element signature="e#242#331#0" expanded="false" />
               </folding>
@@ -58,41 +46,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="charts.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/charts.ejs">
+      <file leaf-file-name="dataload.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/dataload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="685">
-              <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crypto.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crypto.js">
+      <file leaf-file-name="parser.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/error.ejs">
+      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package-lock.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tables.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/tables.ejs">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="238" column="16" lean-forward="false" selection-start-line="238" selection-start-column="16" selection-end-line="238" selection-end-column="16" />
+            <state relative-caret-position="357">
+              <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Websocketserver.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Websocketserver.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -101,28 +99,28 @@
       <file leaf-file-name="log.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/log.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="198" column="52" lean-forward="true" selection-start-line="198" selection-start-column="52" selection-end-line="198" selection-end-column="52" />
+            <state relative-caret-position="731">
+              <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="indexscript.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/indexscript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/login.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="30" column="80" lean-forward="true" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/Command.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="275" column="56" lean-forward="false" selection-start-line="275" selection-start-column="56" selection-end-line="275" selection-end-column="56" />
+            <state relative-caret-position="100">
+              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -132,19 +130,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>findoneand</find>
-      <find>processcmd</find>
-      <find>silindir</find>
-      <find>name</find>
-      <find>socket</find>
-      <find>salary</find>
-      <find>terminal</find>
-      <find>selam con</find>
-      <find>13</find>
-      <find>getconnec</find>
-      <find>h1</find>
-      <find>link</find>
-      <find>Link</find>
       <find>callback</find>
       <find>start b</find>
       <find>start bo</find>
@@ -162,6 +147,19 @@
       <find>bread</find>
       <find>new aler</find>
       <find>login</find>
+      <find>dr</find>
+      <find>navbar</find>
+      <find>logout</find>
+      <find>navbar-nav</find>
+      <find>charts</find>
+      <find>navbar-nav</find>
+      <find>chart</find>
+      <find>terminal</find>
+      <find>sender</find>
+      <find>req.ne</find>
+      <find>req.n</find>
+      <find>req.next</find>
+      <find>property</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,20 +184,20 @@
         <option value="$PROJECT_DIR$/parser.js" />
         <option value="$PROJECT_DIR$/models/connection.js" />
         <option value="$PROJECT_DIR$/crypto.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/indexscript.js" />
         <option value="$PROJECT_DIR$/models/connections.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/controlscript.js" />
         <option value="$PROJECT_DIR$/public/javascripts/tablescripts.js" />
         <option value="$PROJECT_DIR$/public/javascripts/tablescript.js" />
+        <option value="$PROJECT_DIR$/views/charts.ejs" />
+        <option value="$PROJECT_DIR$/views/login.ejs" />
+        <option value="$PROJECT_DIR$/views/index1.ejs" />
+        <option value="$PROJECT_DIR$/views/log.ejs" />
+        <option value="$PROJECT_DIR$/views/tables.ejs" />
+        <option value="$PROJECT_DIR$/public/javascripts/indexscript.js" />
+        <option value="$PROJECT_DIR$/views/Command.ejs" />
+        <option value="$PROJECT_DIR$/public/javascripts/controlscript.js" />
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/models/dataload.js" />
         <option value="$PROJECT_DIR$/BotSocketServer.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/index1.ejs" />
-        <option value="$PROJECT_DIR$/views/charts.ejs" />
-        <option value="$PROJECT_DIR$/views/Command.ejs" />
-        <option value="$PROJECT_DIR$/views/tables.ejs" />
-        <option value="$PROJECT_DIR$/views/log.ejs" />
-        <option value="$PROJECT_DIR$/views/login.ejs" />
       </list>
     </option>
   </component>
@@ -243,8 +241,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -287,7 +285,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../raspbot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../socketmesaj" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
@@ -352,11 +350,14 @@
       <workItem from="1524074625825" duration="34718000" />
       <workItem from="1524316189015" duration="9648000" />
       <workItem from="1524345344263" duration="8932000" />
+      <workItem from="1524498032795" duration="599000" />
+      <workItem from="1524598608088" duration="696000" />
+      <workItem from="1524608546715" duration="7931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88963000" />
+    <option name="totallyTimeSpent" value="98189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -367,13 +368,13 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978448" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978448" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -396,7 +397,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/index.js" />
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -409,7 +409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -464,13 +463,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js" />
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js" />
     <entry file="file://$PROJECT_DIR$/public/vendor/jquery/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -518,20 +510,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/parser.js" />
     <entry file="file://$PROJECT_DIR$/crypt.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/models/Mongodb.js" />
+    <entry file="file://$PROJECT_DIR$/models/connection.js" />
+    <entry file="file://$PROJECT_DIR$/models/Packet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/error.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Mongodb.js" />
-    <entry file="file://$PROJECT_DIR$/models/connection.js" />
+    <entry file="file://$PROJECT_DIR$/views/charts.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index1.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crypto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Command.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="189" column="22" lean-forward="true" selection-start-line="189" selection-start-column="22" selection-end-line="189" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/controlscript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="7" lean-forward="false" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongodb-core/lib/cursor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1558">
+          <caret line="575" column="17" lean-forward="false" selection-start-line="575" selection-start-column="17" selection-end-line="575" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/connections.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tables.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="107" column="133" lean-forward="false" selection-start-line="107" selection-start-column="133" selection-end-line="107" selection-end-column="133" />
           <folding />
         </state>
       </provider>
@@ -548,8 +603,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/indexscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="239">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dataload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -562,30 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Packet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dataload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/controlscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Websocketserver.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -594,85 +641,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crypto.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BotSocketServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="176" column="25" lean-forward="false" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
-          <folding>
-            <element signature="e#242#331#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/error.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="66" column="3" lean-forward="false" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index1.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="208" column="52" lean-forward="false" selection-start-line="208" selection-start-column="52" selection-end-line="208" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/Command.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="275" column="56" lean-forward="false" selection-start-line="275" selection-start-column="56" selection-end-line="275" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/tables.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="238" column="16" lean-forward="false" selection-start-line="238" selection-start-column="16" selection-end-line="238" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/charts.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="58" column="13" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+        <state relative-caret-position="357">
+          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/log.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="198" column="52" lean-forward="true" selection-start-line="198" selection-start-column="52" selection-end-line="198" selection-end-column="52" />
+        <state relative-caret-position="731">
+          <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.ejs">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="30" column="80" lean-forward="true" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
+        <state relative-caret-position="268">
+          <caret line="97" column="26" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotSocketServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="165" column="20" lean-forward="true" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="20" />
+          <folding>
+            <element signature="e#242#331#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

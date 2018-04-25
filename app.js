@@ -89,8 +89,16 @@ app.get('/logs',function (req,res,next) {
 BotSocketServer.GetAllLogs(function (callback) {
     res.render('log',{logs:callback})
 });
-});
 
+});
+app.get('/logs/:id',function (req,res,next) {
+    let name = req.params.id;
+    console.log(name);
+    BotSocketServer.GetUserLogs(name, function (logs) {
+        console.log(logs);
+        res.render('log', {logs: logs});
+    });
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
