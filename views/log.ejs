@@ -100,7 +100,21 @@
                         <tr data-log-id="<%= log._id %>">
                             <td><%= log.sender_id %></td>
                             <td><%= log.receiver_id %></td>
-                            <td><%= log.data%></td>
+                            <td><div class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-fw fa-envelope"></i>
+                                        <span class="d-lg-none">Messages
+                                        <span class="badge badge-pill badge-primary">12 New</span>
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+                                        <h6 class="dropdown-header">LOG</h6>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item">
+                                            <div class="dropdown-message small"><%= JSON.stringify(log.data) %></div>
+                                        </a>
+                                    </div>
+                                </div></td>
                             <td><%= log.Date %></td>
                         </tr>
                         <%}%>

@@ -129,8 +129,9 @@ module.exports=  function(websocket){
             connection.name = packet.data['name'];
             updateConnection(connection);
         }
-        dataloadpush(packet);
         pushDataToSocket(packet);
+        packet.data.output=atob(packet.data.output);
+        dataloadpush(packet);
     };
 
     var sendCmd = function(receiverId,cmd){
@@ -171,21 +172,13 @@ module.exports=  function(websocket){
             callback(result);
         });
     };
-    let GetUserLogs=function (name,callback) {
-        Getconnectionsbyname(name,function (connection) {
-            dataload.find({$or:[{sender_id:connection},{receiver_id:connection}]},function (err,result) {
-                if (err) throw result;
-                callback(result);
-            });
+    let GetUserLogs=function (id,callback) {
+        dataload.find({ $or: [ { sender_id:id },{receiver_id:id} ] },function (err,result){
+            if(err) throw err;
+            callback(result);
         });
     };
-    let Getconnectionsbyname=function (name,callback) {
-        connections.find({name:name},function (err,connection) {
-           if(err) throw err;
-           var results=[];
 
-        });
-    };
 
     return {
         getConnectionById: getConnectionById,

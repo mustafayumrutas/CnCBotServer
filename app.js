@@ -92,9 +92,8 @@ BotSocketServer.GetAllLogs(function (callback) {
 
 });
 app.get('/logs/:id',function (req,res,next) {
-    let name = req.params.id;
-    console.log(name);
-    BotSocketServer.GetUserLogs(name, function (logs) {
+    let id = req.params.id;
+    BotSocketServer.GetUserLogs(id, function (logs) {
         console.log(logs);
         res.render('log', {logs: logs});
     });
