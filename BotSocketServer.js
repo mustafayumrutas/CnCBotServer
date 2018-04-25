@@ -17,8 +17,6 @@ module.exports=  function(websocket){
     var connections=require('./models/connections');
     var dataload=require('./models/dataload');
     const SERVER_ID = uuid();
-    console.log(SERVER_ID);
-    var querys=[];
     var io = require('socket.io')(4000);
     io.on('connection', function(socket){
         var ip=socket.request.connection.remoteAddress;
@@ -38,7 +36,7 @@ module.exports=  function(websocket){
             send(new Packet(SERVER_ID,connection.id,{ack : ''}));
         });
         addNewConnection(connection);
-        log(`-> ${connection.id} : Connection has been received`);
+        sendinfo(`-> ${connection.id} : Baglanti Kuruldu`);
         var data=new dataload ({
             _id:new mongoose.Types.ObjectId,
             sender_id:SERVER_ID,
@@ -53,17 +51,15 @@ module.exports=  function(websocket){
     let onData= function(connection,cipher){
         let data= crypto.decrypt(cipher);
 
-        log(`-> ${connection.id} : Packet has been received`);
+        sendinfo(`-> ${connection.id} : Veri Alindi`);
 
         if(!parser.isValid(data)){
-            log(`-> ${connection.id} : Received packet is invalid`);
+            sendinfo(`-> ${connection.id} : Veri Yanlis`);
             return;
         }
         let parsedPacket = parser.decode(data);
         console.log(parsedPacket);
-        if(parsedPacket.receiver_id === 'BROADCAST'){
-            broadcast(parsedPacket);
-        }else if(parsedPacket.receiver_id == SERVER_ID){
+        if(parsedPacket.receiver_id == SERVER_ID){
             processCmd(parsedPacket,connection);
         }else{
             send(parsedPacket);
@@ -71,7 +67,7 @@ module.exports=  function(websocket){
     };
 
     let onEnd = function(connection,data){
-        log(`-> ${connection.id} : Connection has been lost`);
+        sendinfo(`-> ${connection.id} : baglanti koptu`);
         connection.online=false;
         connection.save(function (err,res) {
             if(err) throw err;
@@ -84,7 +80,7 @@ module.exports=  function(websocket){
 
     let send = function(packet){
        getConnectionById(packet.receiver_id,function (connection) {
-           log(`-> ${connection.id} : Sending Data`);
+           sendinfo(`-> ${connection.id} : Veri Gönderiliyor`);
            console.log(JSON.stringify(connection));
            dataloadpush(packet);
            let parsedPacket = parser.encode(packet);
@@ -94,9 +90,9 @@ module.exports=  function(websocket){
     };
 
     let broadcast = function(packet){
-            connections.find({},{'name':0}).then(function (connection) {
+            getAllConnections(function (connection) {
                 connection.forEach((connection) => {
-                    log(`-> ${connection.id} : Sending broadcast`);
+                    sendinfo(`-> ${connection.id} : Broadcast Yapılıyor`);
                     packet.receiver_id = connection.id;
                     dataloadpush(packet);
                     let parsedPacket = parser.encode(packet);
@@ -107,23 +103,7 @@ module.exports=  function(websocket){
     };
 
 
-    let getConnectionById = function(id,callback){
-        connections.findOne({id:id},function (err,result) {
-            console.log(id);
-            if(err) throw err;
-            console.log(JSON.stringify(result));
-            callback(result);
-        });
-    };
 
-    let getAllConnections = function(callback){
-        connections.find({online:true},function (err,result) {
-            if(err) throw err;
-            else
-            {callback(result);}
-
-        });
-    };
     let processCmd = function(packet,connection){
         if(packet.data.hasOwnProperty('name')){
             connection.name = packet.data['name'];
@@ -140,7 +120,7 @@ module.exports=  function(websocket){
     var broadcastCmd = function(cmd){
         broadcast(new Packet(SERVER_ID,null, {cmd: cmd}))
     };
-    let log = function(message){
+    let sendinfo = function(message){
         console.log(message);
         websocket.send('info',message)
     };
@@ -176,6 +156,23 @@ module.exports=  function(websocket){
         dataload.find({ $or: [ { sender_id:id },{receiver_id:id} ] },function (err,result){
             if(err) throw err;
             callback(result);
+        });
+    };
+    let getConnectionById = function(id,callback){
+        connections.findOne({id:id},function (err,result) {
+            console.log(id);
+            if(err) throw err;
+            console.log(JSON.stringify(result));
+            callback(result);
+        });
+    };
+
+    let getAllConnections = function(callback){
+        connections.find({online:true},function (err,result) {
+            if(err) throw err;
+            else
+            {callback(result);}
+
         });
     };
 

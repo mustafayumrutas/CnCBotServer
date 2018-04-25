@@ -11,15 +11,15 @@ $(document).ready(function () {
         updateConnection(JSON.parse(data));
     });
     let addConnection = function (data) {
-        $('#connections tr:last').after(getConnectionHtml(data));
+        $('#connections tr:last').after(AddList(data));
     };
     let deleteConnection = function (data) {
         $('tr[data-connection-id=' + data.id + ']').empty();
     };
     let updateConnection = function (data) {
-        let element = $('tr[data-connection-id=' + data.id + ']').replaceWith(getConnectionHtml(data));
+        let element = $('tr[data-connection-id=' + data.id + ']').replaceWith(AddList(data));
     };
-    let getConnectionHtml = function (data) {
+    let AddList = function (data) {
         return `
              <tr data-connection-id="${data.id}">
                 <td>${data.id}</td>
