@@ -110,7 +110,6 @@ module.exports=  function(websocket){
             updateConnection(connection);
         }
         pushDataToSocket(packet);
-        packet.data.output=atob(packet.data.output);
         dataloadpush(packet);
     };
 

