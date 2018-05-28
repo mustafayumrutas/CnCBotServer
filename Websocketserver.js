@@ -12,16 +12,12 @@ module.exports = function (http) {
         });
         io.sockets.emit(emission.type, data);
     };
-    let registerListener = function (event, callback) {
-        io.sockets.on(event,callback);
-    };
 
     let send = function(type,data){
         emit({type: type, data:data});
     };
 
     return {
-        registerListener: registerListener,
         send: send
     }
 };

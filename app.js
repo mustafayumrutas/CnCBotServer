@@ -46,7 +46,7 @@ app.get('/', function(req, res, next) {
 });
 app.post('/login',function (req,res,next) {
     auth.login(req,res);
-    res.redirect('index');
+    res.redirect('/');
 });
 app.get('/index', auth.requireToken,function (req,res,next) {
     res.render('index1');
@@ -58,6 +58,7 @@ app.post('/index-cmd', auth.requireToken,function (req,res) {
     BotSocketServer.broadcastCmd(cmd);
 });
 app.get('/logout', auth.requireToken,function (req,res,next) {
+    auth.logout(req,res);
     res.render('login');
 });
 app.get('/charts', auth.requireToken,function (req,res,next) {

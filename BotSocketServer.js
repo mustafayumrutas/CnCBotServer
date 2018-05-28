@@ -6,6 +6,7 @@ var mongoose =require('mongoose');
 
 
 
+
 mongoose.connect('mongodb://localhost/Mesajlasma', function (err) {
 
     if (err) throw err;
@@ -44,11 +45,11 @@ module.exports=  function(websocket){
             data:{ack:' '}
         });
         data.save();
-        socket.on('data', onData.bind({},connection));
-        socket.on('disconnect', onEnd.bind({},connection));
+        socket.on('data', Datalisten.bind({},connection));
+        socket.on('disconnect', Botdisconnect.bind({},connection));
     });
 
-    let onData= function(connection,cipher){
+    let Datalisten= function(connection,cipher){
         let data= crypto.decrypt(cipher);
 
         sendinfo(`-> ${connection.id} : Veri Alindi`);
@@ -66,7 +67,7 @@ module.exports=  function(websocket){
         }
     };
 
-    let onEnd = function(connection,data){
+    let Botdisconnect = function(connection,data){
         sendinfo(`-> ${connection.id} : baglanti koptu`);
         connection.online=false;
         connection.save(function (err,res) {
